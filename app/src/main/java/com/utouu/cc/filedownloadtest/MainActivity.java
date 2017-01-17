@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(MainActivity.this, MyService.class);
-                bindService(startIntent, connection, BIND_AUTO_CREATE);
                 startService(startIntent);
+                bindService(startIntent, connection, BIND_AUTO_CREATE);
             }
         });
     }
@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Intent stopIntent = new Intent(this, MyService.class);
-        stopService(stopIntent);
         unbindService(connection);
+        stopService(stopIntent);
     }
 
 }

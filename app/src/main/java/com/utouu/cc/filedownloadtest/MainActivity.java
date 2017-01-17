@@ -15,7 +15,6 @@ import android.widget.Button;
  * Desc:
  */
 public class MainActivity extends AppCompatActivity {
-
     private MyService.MyBinder myBinder;
     private String mFileName = "rrrr";
     private ServiceConnection connection = new ServiceConnection() {
